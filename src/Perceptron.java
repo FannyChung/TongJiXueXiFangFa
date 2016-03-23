@@ -154,8 +154,8 @@ public class Perceptron {
 		// Point(new double[] { 1, 1 }, -1) });
 
 		// test2
-		perceptron.dual(new Point[] { perceptron.new Point(new double[] { 3, 3 }, 1),
-				perceptron.new Point(new double[] { 4, 3 }, 1), perceptron.new Point(new double[] { 1, 1 }, -1) });
+		perceptron.dual(new Point[] {new Point(new double[] { 3, 3 }, 1),
+				new Point(new double[] { 4, 3 }, 1), new Point(new double[] { 1, 1 }, -1) });
 
 	}
 
@@ -183,41 +183,5 @@ public class Perceptron {
 		this.ni = ni;
 	}
 
-	class Point {
-		ArrayList<Double> x = new ArrayList<>();
-		/**
-		 * 取值1或-1
-		 */
-		int y;
-
-		public Point(ArrayList<Double> x, int y) {
-			setX(x);
-			setY(y);
-		}
-
-		public Point(double[] args, int y) {
-			ArrayList<Double> xArrayList = new ArrayList<>(j);
-			for (int i = 0; i < j; i++) {
-				xArrayList.add(args[i]);
-			}
-			setX(xArrayList);
-			setY(y);
-		}
-
-		public int getY() {
-			return y;
-		}
-
-		public void setY(int y) {
-			this.y = y;
-		}
-
-		public ArrayList<Double> getX() {
-			return x;
-		}
-
-		public void setX(ArrayList<Double> x) {
-			this.x = x;
-		}
-	}
+	
 }
